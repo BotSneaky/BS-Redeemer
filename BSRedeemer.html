@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+								<Title>Test</title>
+								</head>
+								<body style="display:flex; justify-content: center; position:relative; float:left;">
+												<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+												<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+ 									
+							<div class="external">
+      <div class="middle">
+        <div class="internal">    				
+        				
+								<div horizontal layout id="first" class="box" style="margin-top:10px; width:405px; height:240px; background-color:white; box-shadow: 0px 0px 10px 0px grey; border-radius:10px 10px 10px 10px; border:0px;">
+												<div id="second" class="center-cropped" class="box" style="background-repeat:no-repeat; background-position: center center; position:relative; float:left; background-color:blue; border-radius: 10px 0px 0px 10px; width:150px; height:240px;"> 
+																<img style="				background-repeat:no-repeat; background-position:center; background-attachment:fixed; width:150px; height:240px; border-radius:10px 0px 0px 10px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGKdAn7YWSbX6wy6eItRj_3gx8WW2-TxxgOQ&usqp=CAU">													
+												</div>
+										<center>		<div id="third" class="box" style=" width:255px; height:240px; position:relative; float:left; background-color:white; border-radius: 0px 10px 10px 0px;" 
+										<br>
+											<input id="id" type="number" placeholder="Player ID" style="font-family: 'Montserrat', sans-serif; margin-bottom:5px; text-align:center; margin-top:10px; font-size:14px; border:1.8px solid blue; border-radius:5px; width:200px; height:35px;">
+</input>
+		<input id="vcpan" type="number" placeholder="Verification Code" style="margin-left:0px; font-family: 'Montserrat', sans-serif; display:block; margin-bottom:5px; text-align:center; margin-top:0px; font-size:14px; border:1.8px solid blue; border-radius:5px; width:200px; height:35px;">
+		</input>
+		<input id="codepan" type="number" placeholder="Redemption Code" style="margin-left:0px; font-family: 'Montserrat', sans-serif; display:block; margin-bottom:0px; text-align:center; margin-top:0px; font-size:14px; border:1.8px solid blue; border-radius:5px; width:200px; height:35px;">
+  
+</input>
+<p1 class="hover-underline-animation" id="vc" onclick="var letter = document.getElementById('boost').innerText; if (letter === 'Redeem') { document.getElementById('vc').innerHTML = '<b><i>I already have verification</b></i>'; document.getElementById('boost').innerHTML = text; document.getElementById('vc').style.color = 'green'; document.getElementById('vc').style.cursor = 'pointer'; document.getElementById('vcpan').style.display = 'none'; 
+document.getElementById('codepan').style.display = 'none'; } if (letter === 'Send Verification') { document.getElementById('vc').innerHTML = '<b><i>I dont have verification code</b></i>'; document.getElementById('boost').innerHTML = '<b>Redeem</b>'; document.getElementById('vc').style.color = 'red'; document.getElementById('vc').style.cursor = 'pointer'; document.getElementById('vcpan').style.display = 'block'; document.getElementById('codepan').style.display = 'block'; }" style="margin-top:5px; font-family: 'Montserrat', sans-serif; cursor:pointer; color:red; margin-left:70px; font-size:11px"><i><b>I don't have verification code</b></i></p1>
+ <button id="boost" type="button" onclick="var idpan = document.getElementById('id').value; var letter = document.getElementById('boost').innerText;  if (letter === 'Send Verification') { if (!(idpan === '')) { myFunction() } else { document.getElementById('res').innerHTML = 'Player ID Cannot Be Empty!';  } }" style="font-family: 'Montserrat', sans-serif; margin-bottom:5px; margin-top:5px; font-size:14px; cursor:pointer; display: inline-block; border:none; border-radius:80px; height:35px; width:205px; background-color:blue; color:white"><b>Redeem</b></button>										
+ 	
+																								
+																							<style>
+																											.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: blue;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+</style>
+																									<script>
+																												 						
+																									function myFunction() {
+																												const Http = new XMLHttpRequest();
+const url="https://api.mobilelegends.com/mlweb/sendMail?roleId= + 'document.getElementById('id').value;' + &language=en";
+Http.open("GET", url);
+Http.send();
+
+Http.onreadystatechange = (e) => {
+              
+           document.getElementById("res").innerHTML = Http.responseText;
+}
+}
+          
+									      										var idpan = document.getElementById("id").value;
+									      												var letter = document.getElementById("boost").innerText;
+									      												
+									      												let text = "<b>Send Verification</b>";
+									      																      											</script>
+												</div>										
+												</center>
+										</div>
+									<br>
+										<div id="4"class="box" style="display:flex;  position:relative; float:left; box-shadow:0px 0px 5px 0px grey; border-radius:20px 20px 0px 0px; height:40px; width:405px; background-color:blue;"> <p style="width:100%; margin-left:10px; color:white; font-family: 'Montserrat', sans-serif; font-size:14px;"><b>RESULT</b></p><p style=" font-size:14px; font-family: 'Montserrat', sans-serif; color:white; padding-right:10px; cursor: pointer;"><b>[CLEAR]</b></p>
+									
+										</div>
+										<div id="5"class="box" style="overflow:scroll; margin-bottom:10px; width:405px; height:100px; background-color:white; border-radius:0px 0px 20px 20px; box-shadow:0px 0px 5px 0px grey;">  
+								<p id="res" style="margin-left:10px; margin-top:10px; margin-right:10px; margin-bottom:10px; font-family: 'Montserrat', sans-serif; font-size:13px; color:green;"><b>Test</b>
+								</p>
+										</div>  
+										</div> 
+										</center>
+									
+										</html>
+												</body>
+											
